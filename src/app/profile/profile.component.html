@@ -1,0 +1,39 @@
+<div class="profile">
+    <h1 style="display: inline-block;">Профиль</h1>
+
+    <button style="display: inline-block; margin-left: 20px; margin-bottom: 35px; font-size: 16px"
+            [classList]="'btn btn-sm btn-warning'"
+            (click)="redirect('/authorization')">
+        Выйти из аккаунта
+    </button>
+
+    <div class="user-info">
+        <h2>Личная информация</h2>
+        <div>
+            <p>Имя пользователя:</p>
+            <p>{{'' + userData.username}}</p>
+        </div>
+        <div>
+            <p>Имя:</p>
+            <p>{{'' + userData.firstname}}</p>
+        </div>
+        <div>
+            <p>Фамилия:</p>
+            <p>{{'' + userData.lastname}}</p>
+        </div>
+        <div>
+            <p>Дата регистрации:</p>
+            <p>{{'' + getUserDoB()}}</p>
+        </div>
+        <div>
+            <p>Роль:</p>
+            <p>{{'' + userData.role}}</p>
+        </div>
+    </div>
+
+
+    <button [classList]="'btn btn-md btn-outline-primary'"
+            (click)="redirect('/orders')">
+        Мои заказы
+    </button>
+</div>

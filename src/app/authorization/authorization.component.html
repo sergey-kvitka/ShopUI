@@ -1,0 +1,54 @@
+<div>
+    <div class="auth-buttons">
+        <button class="btn btn-md btn-outline-primary" (click)="selectPage('auth')">
+            Авторизация
+        </button>
+        <button class="btn btn-md btn-outline-primary" (click)="selectPage('reg')">
+            Регистрация
+        </button>
+    </div>
+
+    <div class="auth-pages">
+        <div name="auth-page" class="reg d-none">
+            <div class="form-row auth-form d-flex flex-column align-items-center">
+                <h2>Регистрация</h2>
+                <div class="col">
+                    <input type="text" id="login-reg" class="form-control" placeholder="Логин">
+                </div>
+                <div class="col">
+                    <input type="password" id="password-reg" class="form-control" placeholder="Пароль">
+                </div>
+                <div class="col">
+                    <input type="text" id="firstname-reg" class="form-control" placeholder="Имя">
+                </div>
+                <div class="col">
+                    <input type="text" id="lastname-reg" class="form-control" placeholder="Фамилия">
+                </div>
+                <div class="col">
+                    <input type="date" id="date-of-birth-reg" class="form-control" placeholder="Дата рождения">
+                </div>
+                <button class="btn btn-md btn-outline-primary"
+                        (click)="submitReg()">
+                    Зарегистрироваться
+                </button>
+            </div>
+        </div>
+
+        <div name="auth-page" class="auth">
+            <div class="form-row auth-form d-flex flex-column align-items-center">
+                <h2>Авторизация</h2>
+                <div class="col">
+                    <input type="text" id="login-auth" class="form-control" placeholder="Логин">
+                </div>
+                <div class="col">
+                    <input type="password" id="password-auth" class="form-control" placeholder="Пароль">
+                </div>
+                <button class="btn btn-md btn-outline-primary"
+                        (click)="submitAuth()">
+                    Войти
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+

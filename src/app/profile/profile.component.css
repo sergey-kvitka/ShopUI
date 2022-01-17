@@ -1,0 +1,46 @@
+.profile {
+    margin: 10px;
+    font-size: 22px;
+}
+
+.profile h1 {
+    margin: 35px;
+}
+
+.user-info {
+    margin: 20px;
+    background: rgba(240, 244, 255, 0.9);
+    width: 600px;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.user-info h2 {
+    font-size: 30px;
+    margin: 0 auto 20px;
+    width: fit-content;
+}
+
+.user-info div {
+    margin: 20px;
+    display: flex;
+    flex-direction: row;
+}
+
+.user-info p {
+    padding: 5px 10px;
+    margin: 0 10px;
+    border-radius: 5px;
+    background: rgba(0,9,255,0.05);
+    cursor: pointer;
+    transition: 0.5s all ease;
+}
+
+.user-info p:hover {
+    background: rgba(0,9,255,0.2);
+}
+
+.profile button {
+    font-size: 28px;
+    margin: 25px;
+}

@@ -1,0 +1,15 @@
+<button [classList]="'btn btn-md btn-outline-primary'" style="margin: 30px 30px 0"
+        (click)="redirect('/profile')">
+    Вернуться к профилю
+</button>
+<div class="order-list">
+    <div *ngFor="let order of orders">
+        <app-order
+            orderId = {{+order.id}}
+            orderUserId = {{+order.userId}}
+            orderDate = {{order.orderDate}}
+            (deletionDetector)="updateOrders($event)"
+        ></app-order>
+    </div>
+</div>
+
