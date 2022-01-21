@@ -1,11 +1,16 @@
-<div class="profile">
-    <h1 style="display: inline-block;">Профиль</h1>
+<div class="profile" style="margin: auto; width: fit-content;">
 
-    <button style="display: inline-block; margin-left: 20px; margin-bottom: 35px; font-size: 16px"
-            [classList]="'btn btn-sm btn-warning'"
-            (click)="redirect('/authorization')">
-        Выйти из аккаунта
-    </button>
+    <div style="display: flex; flex-direction: row; align-items: center; justify-content: space-around">
+
+        <h1>Профиль</h1>
+
+        <button style="font-size: 16px; height: 40px; margin-top: 35px"
+                [classList]="'btn btn-sm btn-warning'"
+                (click)="redirect('/authorization')">
+            Выйти из аккаунта
+        </button>
+
+    </div>
 
     <div class="user-info">
         <h2>Личная информация</h2>
@@ -30,10 +35,4 @@
             <p>{{'' + userData.role}}</p>
         </div>
     </div>
-
-
-    <button [classList]="'btn btn-md btn-outline-primary'"
-            (click)="redirect('/orders')">
-        Мои заказы
-    </button>
 </div>

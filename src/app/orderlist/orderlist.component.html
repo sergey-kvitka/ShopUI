@@ -1,14 +1,14 @@
-<button [classList]="'btn btn-md btn-outline-primary'" style="margin: 30px 30px 0"
-        (click)="redirect('/profile')">
-    Вернуться к профилю
-</button>
-<div class="order-list">
+<div *ngIf="orders.length == 0">
+    <h3 style="margin: 50px 30px 30px; text-align: center">Список заказов пуст</h3>
+</div>
+
+<div class="order-list" style="margin: 0 auto">
     <div *ngFor="let order of orders">
         <app-order
-            orderId = {{+order.id}}
-            orderUserId = {{+order.userId}}
-            orderDate = {{order.orderDate}}
-            (deletionDetector)="updateOrders($event)"
+                orderId={{+order.id}}
+                orderUserId={{+order.userId}}
+                orderDate={{order.orderDate}}
+                (deletionDetector)="updateOrders($event)"
         ></app-order>
     </div>
 </div>

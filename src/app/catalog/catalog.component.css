@@ -1,0 +1,14 @@
+div {
+    margin: 5px;
+    padding: 5px;
+    width: fit-content;
+}
+
+.one-product {
+    margin: 30px 10px;
+}
+
+.number-input {
+    width: 50px;
+    margin: 10px 35px 5px 20px;
+}

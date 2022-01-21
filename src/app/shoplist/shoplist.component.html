@@ -1,1 +1,62 @@
-<p>shoplist works!</p>
+<div *ngIf="products.length == 0">
+    <h3 style="margin: 50px 30px 30px; text-align: center">Корзина пуста. Добавьте товар в корзину в разделе
+        "Каталог"<br>
+        или проверьте оформленные заказы в разделе "Заказы"</h3>
+</div>
+
+<table *ngIf="products.length != 0"
+       class="table table-bordered table-striped main-cont"
+       style="width: 1000px; margin-top: 30px">
+    <thead>
+    <tr>
+        <th>Наименование</th>
+        <th>Категория</th>
+        <th>Цена за 1 штуку</th>
+        <th>Количество</th>
+        <th>Сумма</th>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let product of products">
+        <td><span>
+                {{product.productName}}
+            </span></td>
+        <td><span>
+                {{product.productTypeName}}
+            </span></td>
+        <td><span>
+                {{product.price}}
+            </span></td>
+        <td><span>
+                {{product.amount}}
+            </span></td>
+        <td><span>
+                {{product.price * product.amount}}
+            </span></td>
+        <td><span>
+                <button style="display: inline-block; margin: 10px"
+                        [classList]="'btn btn-sm btn-danger'"
+                        (click)="removeFromShopList(product.productId)"
+                >Удалить из корзины</button>
+            </span></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <th><span>
+                Итого:
+            </span></th>
+        <th><span>
+                {{getSum()}}
+            </span></th>
+        <td><span>
+                <button style="display: inline-block; margin: 10px"
+                        [classList]="'btn btn-sm btn-info'"
+                        (click)="addOrder(products)"
+                >Оформить заказ</button>
+            </span></td>
+    </tr>
+    </tbody>
+</table>

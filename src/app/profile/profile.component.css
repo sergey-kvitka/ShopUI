@@ -5,12 +5,13 @@
 
 .profile h1 {
     margin: 35px;
+    width: fit-content;
 }
 
 .user-info {
     margin: 20px;
     background: rgba(240, 244, 255, 0.9);
-    width: 600px;
+    width: fit-content;
     padding: 20px;
     border-radius: 20px;
 }
@@ -31,13 +32,13 @@
     padding: 5px 10px;
     margin: 0 10px;
     border-radius: 5px;
-    background: rgba(0,9,255,0.05);
+    background: rgba(0, 9, 255, 0.05);
     cursor: pointer;
     transition: 0.5s all ease;
 }
 
 .user-info p:hover {
-    background: rgba(0,9,255,0.2);
+    background: rgba(0, 9, 255, 0.2);
 }
 
 .profile button {

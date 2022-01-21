@@ -16,3 +16,16 @@
     margin: 10px;
 }
 
+.header a {
+    margin: 0 20px;
+    padding: 5px 20px;
+    transition: 0.5s all ease;
+}
+
+.header a:hover {
+    background: #363636;
+}
+
+.main-cont {
+    margin: 0 auto;
+}

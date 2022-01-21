@@ -65,7 +65,7 @@ export class OrderComponent implements OnInit {
     }
 
     orderDatePast(date: Date): string {
-        return moment(new Date('' + date)).add(4, 'hour').fromNow();
+        return moment(new Date('' + date)).fromNow();
     }
 
     getUsername(): string {
@@ -85,6 +85,14 @@ export class OrderComponent implements OnInit {
                     }
                 }, () => alert('Произошла ошибка. Попробуйте позже или после перезагрузки страницы')
             );
+    }
+
+    getTotalPrice() {
+        let sum: number = 0;
+        this.orderItems.forEach(order => {
+            sum += order.totalPrice;
+        });
+        return sum;
     }
 }
 

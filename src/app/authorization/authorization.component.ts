@@ -3,10 +3,12 @@ import {HttpClient, HttpHeaders} from "@angular/common/http";
 import {Router} from "@angular/router";
 import {DOCUMENT} from '@angular/common';
 import {UserData} from "../profile/profile.component";
+import {ShopList} from "../shoplist/shoplist.component";
 
 export class UsernameToken {
-    private static USERNAME_KEY: string = 'lc-username';
-    private static TOKEN_KEY: string = 'lc-token';
+
+    private static USERNAME_KEY: string = 'ls-username';
+    private static TOKEN_KEY: string = 'ls-token';
 
     public static username(): string {
         return '' + localStorage.getItem(UsernameToken.USERNAME_KEY);
@@ -64,6 +66,7 @@ export class AuthorizationComponent implements OnInit {
     }
 
     ngOnInit(): void {
+        ShopList.clearShopList();
         UsernameToken.setToken('');
         UsernameToken.setUsername('');
     }

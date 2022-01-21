@@ -1,4 +1,4 @@
-<div class="orders">
+<div class="orders main-cont" style="width: fit-content;">
     <h3 style="margin: 40px 20px 20px; display: inline-block"
     >Заказ №{{orderId}} от {{orderDateFormatted(orderDate)}} пользователя {{getUsername()}}</h3>
 
@@ -31,8 +31,11 @@
                 {{orderItem.totalPrice}}
             </span></td>
         </tr>
+        <tr>
+            <th></th>
+            <th>Итого:</th>
+            <th>{{getTotalPrice()}}</th>
+        </tr>
         </tbody>
     </table>
-
-
 </div>
